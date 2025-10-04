@@ -105,16 +105,15 @@ Legend for course readings
 |                 |      |
 | --------------- | ---- |
 |                 | Go to the [week 3 folder](Slides/week3/) for draft and annotated lecture slides.
-| **► Lecture 5** | Synapses overview
-|                 | Short-term plasticity
-|                 | Ionotropic receptors & PSPs
-|                 | Types of synapses and neurotransmitters
+| **► Lecture 5** | Communication and synapses
+|                 | Modelling synapses
+|                 | Types of neurons, neurotrasmitters, and receptors
 | *Reading*       |
 ||❗🧠Coursenotes: [synapses](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.2_synapses.pdf), [synaptic dynamics](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/06.1_synaptic_dynamics.pdf), [types](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.3_types.pdf)
 ||[📚Neuronal Dynamics 3.1 Synapses](https://neuronaldynamics.epfl.ch/online/Ch3.S1.html)
 ||[📚Dayan & Abbott 5.8: Synaptic Conductances (pg. 178-188)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
 |                 |      |
-| **► Lecture 6** | Modelling a synapse
+| **► Lecture 6** | Short term plasticity
 |                 | Synaptic and dendritic integration
 |                 | Multi-compartment models and the cable equation
 | *Reading*       |
