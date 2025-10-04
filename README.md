@@ -1,8 +1,5 @@
 # SEMT30004 Computational Neuroscience
 
-This course is in draft mode. 
-Specifics will change. 
-
 ## Structure
 
 #### Unit & assessment variants
@@ -28,7 +25,7 @@ Selected past exams are in the [past Exams](Past%20Exams/) folder. Some previous
 | **Week 6:**     | Rate models and vision  |
 | **Week 7:**     | Statistical models and data analysis  |
 | **Weeks 8–10:** | Extended coursework  |
- 
+
 #### Textbooks and Reading
 
 Course material will be accompanied by reading or exercises taken from
@@ -57,117 +54,122 @@ Legend for course readings
 ## Week 1
 |                 |      |
 | --------------- | ---- |
-| **► Lecture 1** | Welcome to this course ([draft](Slides/week1/01100_welcome_and_overview.pdf), annotated TBD)
-|                 | Overview of selected anatomy ([draft](Slides/week1/01200_brain_anatomy.pdf), annotated TBD)
-|                 | Neurons ([draft](week1/01300_neurons.pdf), annotated TBD)
-|                 | Action potentials (spikes) ([draft](Slides/week1/01400_action_potential.pdf), annotated TBD)
+|                 | Go to the [week 1 folder](Slides/week1/) for draft and annotated lecture slides.
+| **► Lecture 1** | Welcome to this course 
+|                 | Overview of selected anatomy 
+|                 | Neurons [slides](week1/)
+|                 | Action potentials (spikes) 
 | *Reading*       |
-||❗🧠Coursenotes     [neurons](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.1_neurons.pdf), [cortex](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.4_cortex.pdf), [basal_ganglia](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.5_areas.pdf)
-||📚Dayan & Abbott    [1.1: Properties of Neurons (pg. 4-6)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_01_Neural_Encoding_I.pdf)
+||❗🧠Coursenotes: [neurons](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.1_neurons.pdf), [cortex](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.4_cortex.pdf), [basal_ganglia](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.5_areas.pdf)
+||[📚Dayan & Abbott 1.1: Properties of Neurons (pg. 4-6)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_01_Neural_Encoding_I.pdf)
 |                 |      |
-| **► Lecture 2** | Nernst potential and membrane voltage ([draft](Slides/week1/01500_Nernst_potential.pdf), annotated TBD)
-|                 | The circuit for a passive membrane ([draft](Slides/week1/01600_passive_membrane_circuit.pdf), annotated TBD)
-|                 | Differential equations & numerics ([draft](Slides/week1/01700_ODEs.pdf), annotated TBD)
+| **► Lecture 2** | Nernst potential and membrane voltage 
+|                 | The circuit for a passive membrane 
+|                 | Differential equations & numerics
 | *Reading*       |
-||📚Neuronal Dynamics  [2.1: Equilibrium potential](https://neuronaldynamics.epfl.ch/online/Ch2.S1.html)
-||📚Dayan & Abbott    [5.1-5.2: Electrical Properties of Neurons (pg. 153-161)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
+||[📚Neuronal Dynamics 2.1: Equilibrium potential](https://neuronaldynamics.epfl.ch/online/Ch2.S1.html)
+||[📚Dayan & Abbott 5.1-5.2: Electrical Properties of Neurons (pg. 153-161)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
 |||
 |► **Lab 1** | [Welcome, setup, prerequisites, and notation](Labs/lab1) | 
-|| *(prerequisite review)* ❗🧠Coursenotes     [maths](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/02.2_maths.pdf), [numerical methods](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/02.3_numerical.pdf), [computing](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/02.1_computing.pdf)
-|| *(prerequisite review)* Dayan & Abbott    [Appendices A.3, A.4 (pg. 410-415)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_11_Appendix.pdf)
+|| *(prerequisite review)* ❗🧠Coursenotes: [maths](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/02.2_maths.pdf), [numerical methods](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/02.3_numerical.pdf), [computing](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/02.1_computing.pdf)
+|| *(prerequisite review)* Dayan & Abbott [Appendices A.3, A.4 (pg. 410-415)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_11_Appendix.pdf)
 
 
 ## Week 2
 |                 |      |
 | --------------- | ---- |
-| **► Lecture 3** | Models ([draft](Slides/week2/02100_models.pdf), annotated TBD)
-|                 | LIF ([draft](Slides/week2/02200_LIF.pdf), annotated TBD)
-|                 | Ion channels ([draft](Slides/week2/02300_ion_channels_and_voltage_gating.pdf), annotated TBD)
+|                 | Go to the [week 2 folder](Slides/week2/) for draft and annotated lecture slides.
+| **► Lecture 3** | Models 
+|                 | LIF 
+|                 | Ion channels
 | *Reading*       |
-||❗🧠Coursenotes     [bucket equation](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/05.1_bucket_equation.pdf), [integrate and fire](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/05.2_integrate_and_fire.pdf)
-||📚Neuronal Dynamics  [1.3 Integrate-And-Fire Models up through 1.3.3](https://neuronaldynamics.epfl.ch/online/Ch1.S3.html)
-||📚Dayan & Abbott    [5.3: Single-Compartment Models (pg. 161-162)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
-||📚Dayan & Abbott    [5.4: Integrate-and-Fire Models (pg. 162-166)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
-||📚Dayan & Abbott    [5.5: Voltage-Dependent Conductances (pg. 166)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
-|| 📜 Neuronal Dynamics  [1.4 Limitations of the Leaky Integrate-and-Fire Model](https://neuronaldynamics.epfl.ch/online/Ch1.S4.html)
-|| 📜 Neuronal Dynamics  [5.3 Quadratic Integrate and Fire](https://neuronaldynamics.epfl.ch/online/Ch5.S3.html)
+||❗🧠Coursenotes: [bucket equation](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/05.1_bucket_equation.pdf), [integrate and fire](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/05.2_integrate_and_fire.pdf)
+||[📚Neuronal Dynamics 1.3 Integrate-And-Fire Models up through 1.3.3](https://neuronaldynamics.epfl.ch/online/Ch1.S3.html)
+||[📚Dayan & Abbott 5.3: Single-Compartment Models (pg. 161-162)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
+||[📚Dayan & Abbott 5.4: Integrate-and-Fire Models (pg. 162-166)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
+||[📚Dayan & Abbott 5.5: Voltage-Dependent Conductances (pg. 166)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
+||[📜 Neuronal Dynamics 1.4 Limitations of the Leaky Integrate-and-Fire Model](https://neuronaldynamics.epfl.ch/online/Ch1.S4.html)
+||[📜 Neuronal Dynamics 5.3 Quadratic Integrate and Fire](https://neuronaldynamics.epfl.ch/online/Ch5.S3.html)
 |                 |      |
-| **► Lecture 4** | The Hodgkin-Huxley Model ([draft](Slides/week2/02400_Hodgkin_Huxley_and_conductance_based_spike_models.pdf), annotated TBD)
-|                 | Intracellular electrophysiology and voltage clamp ([draft](Slides/week2/02500_voltage_clamp_and_intracellular_electrophysiology.pdf), annotated TBD)
+| **► Lecture 4** | The Hodgkin-Huxley Model TBD)
+|                 | Intracellular electrophysiology and voltage clamp
 | *Reading*       | 
-||❗🧠Coursenotes      [Hodgkin Huxley](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/07.1_Hodgkin_Huxley.pdf), [recordings: in vitro/vivo electrophysiology (pg 2–4)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.6_recordings.pdf)
-||📚Neuronal Dynamics  [2.2: Hodgkin-Huxley Model](https://neuronaldynamics.epfl.ch/online/Ch2.S2.html)
-||📚Dayan & Abbott    [5.6: The Hodgkin-Huxley Model (pg. 173-175)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
-||📚Dayan & Abbott    [5.7: Modeling Channels (pg. 175)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
+||❗🧠Coursenotes: [Hodgkin Huxley](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/07.1_Hodgkin_Huxley.pdf), [recordings: in vitro/vivo electrophysiology (pg 2–4)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.6_recordings.pdf)
+||[📚Neuronal Dynamics 2.2: Hodgkin-Huxley Model](https://neuronaldynamics.epfl.ch/online/Ch2.S2.html)
+||[📚Dayan & Abbott 5.6: The Hodgkin-Huxley Model (pg. 173-175)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
+||[📚Dayan & Abbott 5.7: Modeling Channels (pg. 175)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
 |||
 |► **Lab 2** | [Simulate a Leaky Integrate and Fire (LIF) neuron](Labs/lab2) | 
 
 ## Week 3
 |                 |      |
 | --------------- | ---- |
+|                 | Go to the [week 3 folder](Slides/week3/) for draft and annotated lecture slides.
 | **► Lecture 5** | Synapses overview
 |                 | Short-term plasticity
 |                 | Ionotropic receptors & PSPs
 |                 | Types of synapses and neurotransmitters
 | *Reading*       |
-||❗🧠Coursenotes     [synapses](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.2_synapses.pdf), [synaptic dynamics](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/06.1_synaptic_dynamics.pdf), [types](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.3_types.pdf)
-||📚Neuronal Dynamics [3.1 Synapses](https://neuronaldynamics.epfl.ch/online/Ch3.S1.html)
-||📚Dayan & Abbott   [5.8: Synaptic Conductances (pg. 178-188)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
+||❗🧠Coursenotes: [synapses](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.2_synapses.pdf), [synaptic dynamics](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/06.1_synaptic_dynamics.pdf), [types](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/01.3_types.pdf)
+||[📚Neuronal Dynamics 3.1 Synapses](https://neuronaldynamics.epfl.ch/online/Ch3.S1.html)
+||[📚Dayan & Abbott 5.8: Synaptic Conductances (pg. 178-188)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
 |                 |      |
 | **► Lecture 6** | Modelling a synapse
 |                 | Synaptic and dendritic integration
 |                 | Multi-compartment models and the cable equation
 | *Reading*       |
-||📚Dayan & Abbott [5.9: Synapses on Integrate-and-Fire Neurons (pg. 188-191)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
-||📚Dayan & Abbott [6.3-6.4: The Cable Equation, Multi-compartment Models (pg. 203-224)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_06_Model_Neurons_II.pdf)
-||📚Neuronal Dynamics [3.2.1 Spatial Structure](https://neuronaldynamics.epfl.ch/online/Ch3.S2.html) (skip 3.2.2, 3.2.3)
-||📚Neuronal Dynamics [3.3 Spatial Structure: Axons](https://neuronaldynamics.epfl.ch/online/Ch3.S3.html) (skip 3.3.2)
+||[📚Dayan & Abbott 5.9: Synapses on Integrate-and-Fire Neurons (pg. 188-191)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_05_Model_Neurons_I.pdf)
+||[📚Dayan & Abbott 6.3-6.4: The Cable Equation, Multi-compartment Models (pg. 203-224)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_06_Model_Neurons_II.pdf)
+||[📚Neuronal Dynamics 3.2.1 Spatial Structure](https://neuronaldynamics.epfl.ch/online/Ch3.S2.html) (skip 3.2.2, 3.2.3)
+||[📚Neuronal Dynamics 3.3 Spatial Structure: Axons](https://neuronaldynamics.epfl.ch/online/Ch3.S3.html) (skip 3.3.2)
 |||
 |► **Lab 3** | [Explore the Hodgkin–Huxley action potential model](Labs/lab3) | 
 
 ## Week 4
 |                 |      |
 | --------------- | ---- |
+|                 | Go to the [week 4 folder](Slides/week4/) for draft and annotated lecture slides.
 | **► Lecture 7** | Neuroplasticity overview
 |                 | Hebbian learning
 |                 | McCulloch–Pitts neurons
 | *Reading*       |
-||❗🧠Coursenotes     [synaptic_plasticity](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/06.2_synaptic_plasticity.pdf), [mp_neurons](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.1_mp_neurons.pdf)
-||📚Neuronal Dynamics [19.1 Hebb rule and experiments](https://neuronaldynamics.epfl.ch/online/Ch19.S1.html)
-||📚Dayan & Abbott   [8.1: Introduction to Plasticity (pg. 281-284)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
-||📚Dayan & Abbott   [8.2: Synaptic Plasticity Rules (pg. 284-293)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
+||❗🧠Coursenotes: [synaptic_plasticity](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/06.2_synaptic_plasticity.pdf), [mp_neurons](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.1_mp_neurons.pdf)
+||[📚Neuronal Dynamics 19.1 Hebb rule and experiments](https://neuronaldynamics.epfl.ch/online/Ch19.S1.html)
+||[📚Dayan & Abbott 8.1: Introduction to Plasticity (pg. 281-284)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
+||[📚Dayan & Abbott 8.2: Synaptic Plasticity Rules (pg. 284-293)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
 |                 |      |
 | **► Lecture 8** | Cerebellum
 |                 | The delta rule
 |                 | The perceptron
 | *Reading*       |
-||❗🧠Coursenotes [cerebellum](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.5_cerebellum.pdf), [perceptron](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.4_perceptron.pdf)
-||📚Dayan & Abbott [8.4: Supervised Learning (pg. 313-326)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
+||❗🧠Coursenotes: [cerebellum](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.5_cerebellum.pdf), [perceptron](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.4_perceptron.pdf)
+||[📚Dayan & Abbott 8.4: Supervised Learning (pg. 313-326)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
 |||
 |► **Lab 4** | [Simulate a phenomenological model of a chemical synapse](Labs/lab4)|
 
 ## Week 5
 |                 |      |
 | --------------- | ---- |
+|                 | Go to the [week 5 folder](Slides/week5/) for draft and annotated lecture slides.
 | **► Lecture 9** | Hippocampus overview
 |                 | Navigation
 |                 | Memory and the trisynaptic circuit
 | *Reading*       |
-||❗🧠Coursenotes     [hippocampus](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.3_hippocampus.pdf)
-||📚Neuronal Dynamics [17.1.1 Recall, recognition](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
-||📚Neuronal Dynamics [17.1.2 Neuronal assemblies](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
+||❗🧠Coursenotes: [hippocampus](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.3_hippocampus.pdf)
+||[📚Neuronal Dynamics 17.1.1 Recall, recognition](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
+||[📚Neuronal Dynamics 17.1.2 Neuronal assemblies](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
 ||📜Neuronal Dynamics [17.1.3 Working memory](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
 |                 |      |
 | **► Lecture 10**  | Pattern separation and dentate gyrus
 |                 | Hopfield networks
 |                 | Stable Hebbian learning rules
 | *Reading*       |
-||❗🧠Coursenotes [hopfield](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.2_hopfield.pdf)
-||📚Neuronal Dynamics [17.2 Hopfield Model](https://neuronaldynamics.epfl.ch/online/Ch17.S2.html)
-||📚Neuronal Dynamics [19.2.1/2 Hebb's Rule & STDP](https://neuronaldynamics.epfl.ch/online/Ch19.S2.html)
-|| 📜 Neuronal Dynamics [19.4 Reward-based learning](https://neuronaldynamics.epfl.ch/online/Ch19.S4.html)
-||📚Dayan & Abbott [7.4: Network Stability & Associative Memory (pg. 260-265)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
-||📚Dayan & Abbott [8.3: Synaptic normalization (pg. 289-291)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
+||❗🧠Coursenotes: [hopfield](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.2_hopfield.pdf)
+||[📚Neuronal Dynamics 17.2 Hopfield Model](https://neuronaldynamics.epfl.ch/online/Ch17.S2.html)
+||[📚Neuronal Dynamics 19.2.1/2 Hebb's Rule & STDP](https://neuronaldynamics.epfl.ch/online/Ch19.S2.html)
+||[📜 Neuronal Dynamics 19.4 Reward-based learning](https://neuronaldynamics.epfl.ch/online/Ch19.S4.html)
+||[📚Dayan & Abbott 7.4: Network Stability & Associative Memory (pg. 260-265)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
+||[📚Dayan & Abbott 8.3: Synaptic normalization (pg. 289-291)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
 |||
 |► **Lab 5** | [McCulloch–Pitts neurons and perceptron](Labs/lab5)|
 
@@ -175,52 +177,50 @@ Legend for course readings
 ## Week 6
 |                 |      |
 | --------------- | ---- |
+|                 | Go to the [week 6 folder](Slides/week6/) for draft and annotated lecture slides.
 | **► Lecture 11**  | rate models of tuning
 |                 | vision I: overview
 |                 | vision II: retina
 |                 | vision III: topographic maps
 | *Reading*       |
-||📚Neuronal Dynamics [7.6 The Problem of Neural Coding (through 7.6.2)](https://neuronaldynamics.epfl.ch/online/Ch7.S6.html)
-||📚Neuronal Dynamics [12.1 Columnar organization](https://neuronaldynamics.epfl.ch/online/Ch12.S1.html)
-||📚Dayan & Abbott [1.2-1.3: Firing Rates (pg. 8-24)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_01_Neural_Encoding_I.pdf)
-||📚Dayan & Abbott [2.3, 2.6: Early Visual System, Retinal/LGN Receptive Fields (pg. 51, 77)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
+||[📚Neuronal Dynamics 7.6 The Problem of Neural Coding (through 7.6.2)](https://neuronaldynamics.epfl.ch/online/Ch7.S6.html)
+||[📚Neuronal Dynamics 12.1 Columnar organization](https://neuronaldynamics.epfl.ch/online/Ch12.S1.html)
+||[📚Dayan & Abbott 1.2-1.3: Firing Rates (pg. 8-24)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_01_Neural_Encoding_I.pdf)
+||[📚Dayan & Abbott 2.3, 2.6: Early Visual System, Retinal/LGN Receptive Fields (pg. 51, 77)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
 |                 |      |
 | **► Lecture 12**  | vision IV: cortical hierarchy
 |                 | vision V: sparse coding
 |                 | V1 laminar structure and the cortical microcircuit
 | *Reading*       |
-||❗🧠Coursenotes [vision](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/04.2_vision.pdf)
-||📚Dayan & Abbott [2.7: Constructing V1 Receptive Fields (pg. 79-81)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
-||📚Dayan & Abbott [10.4: Discussion (on sparse coding) (pg. 389-394)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_10_Representational_Learning.pdf)
+||❗🧠Coursenotes: [vision](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/04.2_vision.pdf)
+||[📚Dayan & Abbott 2.7: Constructing V1 Receptive Fields (pg. 79-81)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
+||[📚Dayan & Abbott 10.4: Discussion (on sparse coding) (pg. 389-394)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_10_Representational_Learning.pdf)
 |||
 |► **Lab 6** | [Hopfield networks](Labs/lab6)|
 
 ## Week 7
 |                 |      |
 | --------------- | ---- |
+|                 | Go to the [week 7 folder](Slides/week7/) for draft and annotated lecture slides.
 |**► Lecture 13** | Wilson–Cowan models
 |                 | Neural fields
 |                 | Continuous attractors
 | *Reading*       |
-||📚Neuronal Dynamics [Ch 18 Cortical Field Models](https://neuronaldynamics.epfl.ch/online/Ch18.html) (notation differs)
-||📚Neuronal Dynamics [18.3 Bump attractors](https://neuronaldynamics.epfl.ch/online/Ch18.S3.html)
-||📚Dayan & Abbott [7.2: Firing-Rate Models (pg. 231)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
-||📚Dayan & Abbott [7.4: Recurrent Networks (pg. 247-252)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
-|| 📜Dayan & Abbott  [7.5: Excitatory-Inhibitory Networks (pg. 265)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
+||[📚Neuronal Dynamics Ch 18 Cortical Field Models](https://neuronaldynamics.epfl.ch/online/Ch18.html) (notation differs)
+||[📚Neuronal Dynamics 18.3 Bump attractors](https://neuronaldynamics.epfl.ch/online/Ch18.S3.html)
+||[📚Dayan & Abbott 7.2: Firing-Rate Models (pg. 231)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
+||[📚Dayan & Abbott 7.4: Recurrent Networks (pg. 247-252)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
+||[📜Dayan & Abbott 7.5: Excitatory-Inhibitory Networks (pg. 265)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
 |                 |      |
 | **► Lecture 14**  | Extracellular recording
 |                 | Statistical analysis of spiking data
 | *Reading*       |
-||📚Neuronal Dynamics  [11.2 Encoding Models in Systems Neuroscience](https://neuronaldynamics.epfl.ch/online/Ch11.S2.html)
-||📚Dayan & Abbott    [1.4: Spike-Train Statistics (pg. 24-34)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_01_Neural_Encoding_I.pdf)
-|                 | [2.2, 2.4: Estimating Firing Rates, Reverse-Correlation (pg. 45-51, 60-74)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
+||❗🧠Coursenotes: [spike-train statistics](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/08.1_spike_train_statistics)
+||[📚Neuronal Dynamics 11.2 Encoding Models in Systems Neuroscience](https://neuronaldynamics.epfl.ch/online/Ch11.S2.html)
+||[📚Dayan & Abbott 1.4: Spike-Train Statistics (pg. 24-34)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_01_Neural_Encoding_I.pdf)
+||[📚Dayan & Abbott 2.2, 2.4: Estimating Firing Rates, Reverse-Correlation (pg. 45-51, 60-74)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
 |||
 |► **Lab 7** | There is no lab 7, but but these [demo notebooks](Labs/lab7) may interest you.|
-
-
-
-
-
 
 
 
