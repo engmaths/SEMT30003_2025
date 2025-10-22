@@ -1,0 +1,272 @@
+\documentclass[11pt]{article}
+\input{header.tex}
+\usepackage{floatrow}
+\usepackage{multicol}
+\lhead{\textit{Computation Neuroscience - Extended Coursework}}
+\renewcommand{\thesubsection}{Question \arabic{subsection}\!\!\!}
+\begin{document}
+
+{\color{teal}{\textit{This is a draft of the coursework offered in advance of the coursework period; there may be some adjustments between now and then.}}}
+
+\section*{Coursework}
+
+This coursework has two parts.
+Parts I (25 marks) contains computational modelling and simulation questions based on the course labs. 
+Part II (25 marks) explores statistical analysis of spiking data. 
+Each part contains 3 questions worth 5 marks each, and 1 open-ended question worth 10 marks, for 50 marks total toward your final grade. 
+
+\clearpage
+\section*{Part I: Computational Modelling}
+
+This section contains 4 questions extending the labs (with the exception of perceptron and delta rule, which are touched on in part II). 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{integrate-and-fire ~\normalfont [5 marks]}
+Consider the Quadratic Integrate and Fire (QIF) neuron with dynamics $\dot \tau_m v = -v(1-v) + R_m I$. This model ``spikes" by blowing up to $+\infty$ (and ``resetting" through $-\infty$) in finite time. In practice, numerical simulations set some finite positive voltage for the threshold, and resets to rest (Choose these thresholds at your discretion). \footnote{You can also change coordinates map this ``voltage" to a \href{https://en.wikipedia.org/wiki/Theta_model}{circular variable $\theta$}, with $\theta$ passing through $\pi$ corresponding to the `spike' up to and through $+\infty$ and back around from $-\infty$, allowing you to simulate the equations without choosing arbitrary finite thresholds.} 
+\begin{itemize}
+\item[\textbf{(i)}] 
+Simulate the QIF model\footnote{One way to do this is to use forward Euler, handling the reset manually.}. Explore some inputs where the model does, and does not spike, and explore how it integrates and responds to inputs near threshold. Use plots from this exploration to support your analysis in part (ii).
+\item[\textbf{(ii)}]
+Compare the QIF firing behaviour to that of the Leaky Integrate-and-Fire (LIF) neuron. What qualitative features does the QIF model capture that the LIF cannot? 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{conductance models ~ \normalfont [5 marks]}
+
+The phenomenon of \textit{post-inhibitory rebound spiking} occurs in some neurons when a hyperpolarising current pushes a cell's voltage below its resting voltage. This opens or deinactivates voltage-gated channels, making the cell more excitable. As a result, a neuron that would normally be silent at rest can emit a spike when the inhibition is withdrawn.
+\begin{itemize}
+\item[\textbf{(i)}] Demonstrate this phenomenon using one of the Hodgkin-Huxley models from lab 3: Find a current input that hyperpolarises the cell, and elicits a rebound spike when withdrawn. Communicate the results of your simulation with the aid of figures. 
+\item[\textbf{(ii)}] Discuss the role of voltage-gated sodium channels in post-inhibitory rebound spiking in this model, and discuss this in context of the idea of a \textit{threshold} (do conductance-based models really have a threshold)? 
+\end{itemize}
+% Hyperpolarization-activated cation current (I_h):
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Synapses ~ \normalfont [5 marks]}
+
+%This question explores (i) How simple models may lead to ODEs with no analytic solution, (ii) How phenomenological models can nevertheless be very accurate, and (iii) What is lost when using these approximations. It asks you to numerically explore ODEs and think about when approximations are justified.
+% \footnote{This is loosely based on \textit{Ermentrout and Terman} chapter 7, but note that the model here is not equivalent}
+
+Consider a glutamatergic synapse where a presynaptic spike at time $t\,{=}\,0$ instantly releases concentration $q_0$ of glutamate into the synaptic cleft, which binds (reversibly) to post-synaptic AMPA receptors (AMPARs) and is cleared away by reuptake and diffusion\footnote{You may find \textit{Ermentrout and Terman} chapter 7 helpful, the textbook is on the course Github.}. Let $q(t)\,{\ge}\,0$ be the concentration of free glutamate in the synaptic cleft, initially $q(t{=}0)\,{=}\,q_0$, and $s(t)\,{\in}\,\{0,1\}$ be the fraction of post-synaptic AMPA receptor binding sites bound to glutamate.
+
+%\begin{multicols}{2}
+\textbf{Model 1:} A normalized mass action chemical kinetics model obeying the nonlinear ODE 
+\lequation{syn1a}{
+\dot s &= -k_\mathrm{d\,} s + k_\mathrm{b\,} q (1-s)
+&\qquad&&
+\dot q &= -k_\mathrm{c\,} q - \dot s \text{A}_\mathrm{total\,}.
+}
+%\vfill\null\columnbreak
+\textbf{Model 2:~} Model 1 generally lacks nice closed-form solutions. For some parameters we can use two linear first-order ODEs as a good approximation:
+\lequation{syn1b}{
+\dot s &= -k_\mathrm{d} s + k_\mathrm{r} q,
+&\qquad&&
+\dot q &= -k_\mathrm{c\,} q,
+}
+which for $s(0)\,{=}\,0$, $q(0)\,{=}\,q_0$, $k_\mathrm{d}\,{\ne}\,k_\mathrm{c}$ has a difference-of-exponentials solution $
+s(t)\,{=}\, 
+k_\mathrm{r} q_0
+\tfrac{e^{-k_\mathrm{c} t}-e^{-k_\mathrm{d} t}}
+{k_\mathrm{d} - k_\mathrm{c}}
+$.
+\vspace{-\baselineskip}
+\begin{table}[h!]
+  \centering \small 
+  \begin{tabular}{clll}
+    \textbf{Parameter} & \textbf{Value} & \textbf{Units} & \textbf{Description} \\
+    \midrule
+    $A_\mathrm{total}$ & 0.32 & mM & Stoichiometry conversion factor \\
+    $k_\mathrm{d}$ & 0.19 & ms$^{-1}$ & Dissociation rate constant \\
+    $k_\mathrm{b}$ & 1.1 & ms$^{-1}$mM$^{-1}$ & Binding rate constant \\
+    $k_\mathrm{r}$ & 0.67  & ms$^{-1}$mM$^{-1}$ & Effective gating rise rate constant\\
+    $k_\mathrm{c}$ & 5 & ms$^{-1}$mM$^{-1}$ & Rate constant for glutamate clearance \\
+  %  \midrule
+  %  \midrule
+  %  $C_d$ & $8\times 10^{-5}$ & $\mu$F & Dendrite membrane capacitance \\
+  %  $g_{\ell}$ & $2.4\times 10^{-5}$ & mS & Dendrite leak conductance \\
+  %  $E_{\ell}$ & $-65$ & mV & Leak reversal potential \\
+  %  $g_{\mathrm{AMPA}}$ & $7.2\times 10^{-7}$ & mS/spine & AMPAR maximal conductance \\
+  %  $E_{\mathrm{AMPA}}$ & $0$ & mV & AMPAR reversal potential \\
+  \end{tabular}
+  \caption{\textit{Synapse model 1 and 2 parameters. These are effective parameters (mM is millimolar, but do not worry much about units: Use these as-is to simulate in time units of milliseconds).}}
+  \label{syn1aparams}
+\end{table}
+\vspace{-\baselineskip}
+\begin{itemize}
+\item[\textbf{(i)}] Simulate ODEs \eqref{syn1a} and \eqref{syn1b} using the parameters in Table \ref{syn1aparams}, and $q_0\,{=}\,1$ mM (they should be similar). These simulations should be included, discussed, and referenced, somewhere in a plot (or part of a plot) for your overall answer to this question.
+\item[\textbf{(ii)}] 
+Compare models 1 and 2 for a range of release amounts ($q_0$), say from $q_0{=}0.1$ to $q_0{=}10$. Where do the models agree, differ, and when does it matter? Interpret these models in the context of physiology and alternative synaptic models.
+\end{itemize}
+% Hyperpolarization-activated cation current (I_h):
+%q_0 &= q(t{=}0) = 1 &&\text{Initial amount of glutamate released by presynaptic spike (mM);}
+
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hopfield ~ \normalfont [Open-ended --- 10 marks]**}
+
+In the Hopfield attractor network lab, you may have noticed that the network had poor capacity: It struggled to store all 16 hexidecimal digits distinctly and without spurious attractors.% This would be like attempting to store attractor patterns based directly on the entorhinal cortex activity. 
+\begin{itemize}
+\item[\textbf{(i)}] (open ended) Extend your Hopfield solution to mimic dentate gyrus' \textit{pattern separation}:
+You should expand the given binary patterns into larger, sparse binary vectors, and show that these expanded representations can be stored more effectively. Your pattern separation routine should be a deterministic function of the original patterns, and you should comment on how your approach does (or does not) relate to the dentate gyrus' approach of using a ($\sim$random) weight matrix to expand patterns into a higher-dimensional space with $k$-winner-take-all sparsity.
+%\footnote{Attempting to robustly add and update a \textit{decoding} model as well (i.e. adding CA1, subiculum) could easily verge on open research questions, so for this just worry about getting reliable, distinct encoding. Even without a decoder, this memory system suffices, for example, to recognise whether you've see a number's pattern before.} 
+\end{itemize}
+\textit{**This is an open-ended question designed to allow students to demonstrate study and originality beyond what has been taught, for those aiming for top marks.}
+
+
+\clearpage
+\section*{Part II: Statistical Data Analysis}
+Part II gives a data-led perspective on spike trains. Some questions are adapted from \href{http://www.gatsby.ucl.ac.uk/\~dayan/book/exercises.html}{part 1.1 of the Dayan and Abbott textbook}.
+The \href{https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/08.1_spike_train_statistics}{spike-train statistics coursenotes} accompany this section. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Poisson, Fano, and CV ~ \normalfont [5 marks]}
+This question is about Poisson processes.
+\begin{itemize}
+\item[\textbf{(i)}]
+First, write code to generate spikes using a Poisson process and sample a homogeneous Poisson spike train with firing rate of 35 Hz. Then, extend your code to sample from an inhomogeneous Poisson neuron that has a 5 ms absolute refractory period, keeping the overall firing rate at 35~Hz (35 spikes per second). Briefly describe what this code does using mathematics and figures.
+\item[\textbf{(ii)}]
+Plot how the ISI coefficient of variation and spike-count Fano factor in 100~ms bins change over refractory periods ranging from $0$ to $28$ milliseconds. Include a descriptive figure title and a caption with enough detail to understand the context of what is being plotted and the effect that the figure is demonstrating.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data Inspection~ \normalfont [5 marks]}
+In the folder for this extended coursework, you will find the data file \texttt{rho.dat}. This contains data collected by Rob de Ruyter van Steveninck from a fly H1 neuron responding to an approximate white-noise visual motion stimulus. Data were collected for 20 minutes at a sampling rate of 500 Hz. In the file, rho is a vector that gives the sequence of spiking events or non-events in 2 ms time bins.
+\begin{itemize}
+\item[\textbf{(i)}]
+Calculate the Fano factor and coefficient of variation for this spike train as for the simulated spike trains above (also exploring 10 ms, 50 ms, 100 ms bin size). Does the spike train exhibit more variability or less variability than you'd expect for a homogeneous Poisson process? How is this reflected in the count Fano factor and ISI coefficient of variation? Conjecture on why the data may deviate from a homogeneous Poisson process in this experiment. (25-100 words)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Spike-Triggered Average (STA) ~ \normalfont [5 marks]}
+\label{staq}
+In the folder for this extended coursework you will find the data file \texttt{stim.dat}. This gives the motion stimulus that evoked the spike train in \texttt{rho.dat}.
+\begin{itemize}
+\item[\textbf{(i)}] 
+Calculate and plot the spike triggered average over a 100 ms window. 
+\item[\textbf{(ii)}]
+Calculate the stimulus triggered by consecutive pairs of spikes: For intervals of 2 ms\footnote{i.e.\ two adjacent 2 ms bins each with a spike}, 4 ms, 10 ms, and 20 ms calculate the average stimulus before a pair of spikes separated by that interval. Visualise your results and discuss the role of the refractory period in what you see. 
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Perceptron $\to$ Poisson ~ \normalfont [Open-ended --- 10 marks]**}
+
+\newcommand{\eps}{\varepsilon}
+Learning rules similar to the delta rule appear when training statistical models of neural encoding. We will explore a linear--nonlinear Poisson encoding model using the fly H1 data (inputs $u$ from \texttt{stim.dat}, predicting spikes $y$ from \texttt{rho.dat}):
+\lequation{delta}{
+\Delta \V w &= \eta\cdot \V x \V\eps \\
+\eps &= y^* - \lambda \\
+\lambda &= \exp( \V w^\top \V x).\\
+}
+For each time bin $i$, define a non-negative integer spike count $y_i$ and input feature vector $\V x_i^\top = \{ 1, u_{i-1}, u_{i-2}, \dots, u_{i-K}\}$ which includes a bias (threshold) term and stimulus history for $K$ time steps. With this setup, the rule \eqref{delta} will learn weights $\V w^\top = \{ -\vartheta, w_{u_{-1}}, \dots, w_{u_{-K}} \}$ that contain a (negative) threshold and stimulus history filter. 
+
+\begin{itemize}
+\item[\textbf{(i)}] 
+Write code to learn $\V w$ for a history length $L=100$ bins\footnote{If using the delta-like rule, try $\eta=10^{-6}$. You may want to wrap $\exp()$ to avoid numerical overflow.}. You may modify your perceptron lab, or use another machine learning (ML) solution. (You will need to prepare the feature vectors $\V x$ yourself from the H1 data).
+Without regularisation, your history filter may alternate between positive/negative numbers\footnote{The stimulus lacks variation at high frequencies, so learning over-fits to these details.}---this is expected. Show how well the trained model predicts neural activity\footnote{For example by comparing the predicted $\lambda$ and true $y$ in 10 ms bins (or another graphic of your own design)}.
+\item[\textbf{(ii)}] 
+One way to regularise is to add zero-mean Gaussian noise to the stimulus during training\footnote{In our test, $\sigma^2$=1/sample worked well, i.e.
+ \texttt{x\_i=concatenate([[1],u[i-L:i]+randn(L)])} in pseudo-numpy.}.
+Re-learn $\V w$ using regularisation on the history filter\footnote{You do not need to regularise the threshold parameter.}. Comment on the relationship between the history filter and the Spike-Triggered Average (STA), and on physiological interpretation of noise for learning in the brain\footnote{If you chose another approach, comment on its  connection to the delta-like rule \& regularisation via noise.}.
+\item[\textbf{(iii)}] Extend your model of the stimulus $\to$ activity encoding to capture refractory effects by making it an \textit{autoregressive} point process, by creating history features that depend on the past of the spike-count time series $\V y$. One way to achieve this with regularization is to filter $\V y$ through a handful of exponential filters akin to synapses with various time constants\footnote{Models with only two exponential filters can work well, but unless you are using a ML solution that can tune time constants, you may want to fit 5-10 time constants at the same time, to see which ones the model uses. Raised-cosine basis functions that average over progressively more time further into the past are another popular choice}.
+\end{itemize}
+\textit{This is an open-ended question designed to allow students to demonstrate study and originality beyond what has been taught, for those aiming for top marks. Some students may not complete part (iii). }
+
+\clearpage
+
+
+
+
+
+%=====================================================================
+%=====================================================================
+%=====================================================================
+%=====================================================================
+%=====================================================================
+%=====================================================================
+%=====================================================================
+%=====================================================================
+\setcounter{subsection}{0}
+\renewcommand{\thesubsection}{\Roman{subsection}}
+%=====================================================================
+\clearpage
+\section*{Report instructions}
+
+Submit your coursework as a professionally formatted document in the \texttt{.pdf} file format. Do not use a font size less than 11 pt and have normal looking margins. Single-spaced text is preferred. Organise the report with the same structure as this document, with question and sub-questions numbers as headers and sub-headers, respectively. Any coding language can be used, and you should include small code extracts in the text where appropriate. You will also be required to upload your code. Submission is through blackboard upload.
+
+There are 50 marks in total, this will be used to calculate a
+percentage. The two questions marked with an asterisk are harder and
+more open ended; do not spend too much time on these, the marking will
+give some credit for any attempt at the modelling they involve, but to
+get most or all of the 15 marks will require some experimentation.
+
+Scientific communication relies strongly on figures. Communicate your work using professionally prepared figures and tables throughout. 
+Marks will be deducted for graphs where the text is tiny, or relevant units, titles, or axis labels are missed. Do not
+include graphs that have been produced by screenshots. 
+Neuroscience as a subject favours long figure captions that provide
+detailed information about what the graphs show, without giving
+interpretation (that is left to the main text). Follow this
+convention. It is easier to design consistent clear figures if you set the figure size in code to consistently match the text width.
+You do not need to place every plot for every separate sub-question (i,ii,iii) as its own figure. Please consider designing a single, tasteful, compound figure (i.e. with sub-figures) to reference throughout your answers to each question.
+
+See if you can cover all points in as few as six pages. This is not target length a much shorter submission could still earn
+all or most of the marks. Exceptionally, seven-page submissions may be accepted, but please check with course instructors to ensure you are not doing more work than expected. The reason the length is not shorter is to make it easier to write without having to worry about being very
+precise---not because a long response is required.
+
+Your submission should contain professionally typeset mathematical expressions.
+You will find it easier to achieve a professionally formatted result if you use the document preparation system \LaTeX. The University of Bristol maintains licenses for \href{https://www.overleaf.com}{Overleaf}. 
+
+
+%\textit{\textbf{Am I doing more work than is required?~}} If you are using a compact LaTex template 11pt font, then well-composed responses to the six 5-point questions should take between one-half and one page (1-2 columns). There are two challenge questions worth 10 points each. A clear and well-composed write-up for these should fit within $1 \sfrac{1}{2}$ pages. An exceptionally well-crafted and compact write up could fit in 5-7 pages. If you use a looser template, leave lots of white space (e.g. figures are not compactly designed for the text width), and do not have time to revise your response to be concise, then you may find the same amount of material occupies up to 11 pages (but do not submit 11 pages of dense, compact text!). 
+
+%\clearpage\section*{Bonus content}
+%\lequation{pp}{\ln \lambda_t &= \V w * x
+%\\\Pr(y|x;w) &\propto \lambda^y e^{-\lambda} 
+%\\\ln \Pr(y|x;w) &\propto y \ln(\lambda) - \lambda
+%\\\ln \Pr(y|x;w) &\propto y (\V w^\top \V x) - e^{\V w^\top \V x}
+%\\-\partial_{\V w} \ln \Pr(y|x;w) &\propto (y - \lambda) \V x^\top}
+
+\vspace{-0.5\baselineskip}
+\subsubsection*{Use of Artificial Intelligence}
+
+This assessment counts towards your final grade and the default University of Bristol AI policy (``you must not use AI") is in effect, with the following exceptions: You may use the AI tools to check grammar, debug LaTex, and prepare LaTex source code for tables and figures. This coursework assesses judgement, taste, and insight in scientific communication, not how quickly you can debug LaTex errors.
+
+\vspace{-0.5\baselineskip}
+\subsubsection*{Marking Criteria}
+
+See the separate
+\texttt{marking\_criteria\_extended\_coursework\_SEMT30003.pdf} 
+in this coursework folder for details of how the university marking criteria will apply to your submission.
+
+\clearpage
+\section*{Moderation}
+
+Moderation of coursework will be performed by a second marker as follows: 
+
+Let $N$ be the number of total coursework submissions. A random sample of $\op{max}\{8,\op{ceil}(N/10)\}$ submissions distributed across the grade boundaries (fail/pass/merit/distinction) will be drawn and reviewed. 
+
+Possible outcomes from moderation are:\setlength{\itemsep}{-2mm}
+\begin{itemize}\setlength{\itemsep}{-2mm}
+\item Moderator confirms marks (no changes)
+\item Moderator adjusts all marks to improve alignment with the marking criteria and/or align the mark distribution to program norms\footnote{This is not quite the same as ``we will curve the overall cohort marks to match UK grade boundary norms", but should provide you with a similar level of reassurance. A year with unusually poor or unusually excellent submissions will not be inflated or punished on account of cohort performance. Rather, the relationship between quality and mark will be moderated based on overall performance from previous years, and across similar courses. This is a sort of spatiotemporal-averaged curving mechanism, with the added benefit that ongoing audits and reviews of program difficulty allow this process to better reflect a normative consensus for UK degree programs, rather than allowing larger per-cohort fluctuations to bias the individual quality$\to$mark mapping like a within-cohort curve would.}.
+\item A subset of marks may be adjusted to fix inconsistencies.
+\item Some or all assessments may be re-marked if inconsistencies cannot be fixed easily.
+\end{itemize}
+
+
+
+
+
+
+
+\end{document}
