@@ -12,17 +12,17 @@
 
 Selected past exams are in the [past Exams](Past%20Exams/) folder. Some previous incarnations of this course are on Github: [[2024]](https://github.com/engmaths/SEMT30003_2024) [[2022]](https://github.com/LaurenceA/COMS30017_2022) [[2021]](https://github.com/LaurenceA/COMS30017_2021) [[2018–19]](https://github.com/coms30127/2018_19) [[2013–17]](https://github.com/conorhoughton/COMS30127). 
 
-#### Scheduled topics: 
+#### Scheduled topics:
 
 |                 | Topic  |
 | --------------- | ------ |
 | **Week 1:**     | Introduction to neuroscience \& other background material  |
 | **Week 2:**     | The action potential (spikes)  |
 | **Week 3:**     | Synaptic communication   |
-| **Week 4:**     | Synaptic plasticity 1: Cerebellum \& perceptron  |
-| **Week 5:**     | Synaptic plasticity 2: Hippocampus \& Hopfield   |
-|                 | (break for reading week)  |
-| **Week 6:**     | Rate models and vision  |
+| **Week 4:**     | Synaptic plasticity 1: Cerebellum \& perceptron  | |
+| **Week 5:**     | Rate models and vision  |
+|                 | (break for reading week) 
+| **Week 6:**     | Synaptic plasticity 2: Hippocampus \& Hopfield   |
 | **Week 7:**     | Statistical models and data analysis  |
 | **Weeks 8–10:** | Extended coursework  |
 
@@ -144,39 +144,14 @@ Legend for course readings
 ||❗🧠Coursenotes: [cerebellum](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.5_cerebellum.pdf), [perceptron](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.4_perceptron.pdf)
 ||[📚Dayan & Abbott 8.4: Supervised Learning (pg. 313-326)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
 |||
-|► **Lab 4** | [Simulate a phenomenological model of a chemical synapse](Labs/lab4)|
+|► **Lab 4** | [Simulate a phenomenological model of a chemical synapse](Labs/lab4) (cancelled) |
+|► **Lab 5** | [McCulloch–Pitts neurons and perceptron](Labs/lab5) (moved up) |
 
 ## Week 5
+(swapped with week 6)
 |                 |      |
 | --------------- | ---- |
 |                 | Go to the [week 5 folder](Slides/week5/) for draft and annotated lecture slides.
-| **► Lecture 9** | Hippocampus overview
-|                 | Navigation
-|                 | Memory and the trisynaptic circuit
-| *Reading*       |
-||❗🧠Coursenotes: [hippocampus](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.3_hippocampus.pdf)
-||[📚Neuronal Dynamics 17.1.1 Recall, recognition](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
-||[📚Neuronal Dynamics 17.1.2 Neuronal assemblies](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
-||📜Neuronal Dynamics [17.1.3 Working memory](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
-|                 |      |
-| **► Lecture 10**  | Pattern separation and dentate gyrus
-|                 | Hopfield networks
-|                 | Stable Hebbian learning rules
-| *Reading*       |
-||❗🧠Coursenotes: [hopfield](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.2_hopfield.pdf)
-||[📚Neuronal Dynamics 17.2 Hopfield Model](https://neuronaldynamics.epfl.ch/online/Ch17.S2.html)
-||[📚Neuronal Dynamics 19.2.1/2 Hebb's Rule & STDP](https://neuronaldynamics.epfl.ch/online/Ch19.S2.html)
-||[📜 Neuronal Dynamics 19.4 Reward-based learning](https://neuronaldynamics.epfl.ch/online/Ch19.S4.html)
-||[📚Dayan & Abbott 7.4: Network Stability & Associative Memory (pg. 260-265)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
-||[📚Dayan & Abbott 8.3: Synaptic normalization (pg. 289-291)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
-|||
-|► **Lab 5** | [McCulloch–Pitts neurons and perceptron](Labs/lab5)|
-
-
-## Week 6
-|                 |      |
-| --------------- | ---- |
-|                 | Go to the [week 6 folder](Slides/week6/) for draft and annotated lecture slides.
 | **► Lecture 11**  | rate models of tuning
 |                 | vision I: overview
 |                 | vision II: retina
@@ -194,6 +169,37 @@ Legend for course readings
 ||❗🧠Coursenotes: [vision](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/04.2_vision.pdf)
 ||[📚Dayan & Abbott 2.7: Constructing V1 Receptive Fields (pg. 79-81)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
 ||[📚Dayan & Abbott 10.4: Discussion (on sparse coding) (pg. 389-394)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_10_Representational_Learning.pdf)
+|||
+|► **Guest speaker** | Please note that Lab 5 has been moved up into week 4, and that the guest lecture replaces the usual lab slot this week. |
+
+
+## Week 6
+(swapped with week 5)
+
+
+
+|                 |      |
+| --------------- | ---- |
+|                 | Go to the [week 6 folder](Slides/week6/) for draft and annotated lecture slides.
+| **► Lecture 9** | Hippocampus overview
+|                 | Navigation
+|                 | Memory and the trisynaptic circuit
+| *Reading*       |
+||❗🧠Coursenotes: [hippocampus](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.3_hippocampus.pdf)
+||[📚Neuronal Dynamics 17.1.1 Recall, recognition](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
+||[📚Neuronal Dynamics 17.1.2 Neuronal assemblies](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
+||📜Neuronal Dynamics [17.1.3 Working memory](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
+|                 |      |
+| **► Lecture 10**  | Pattern storage and retrieval in area Ca3
+|                 | Hopfield networks
+|                 | Continuous Attractors
+| *Reading*       |
+||❗🧠Coursenotes: [hopfield](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/03.2_hopfield.pdf)
+||[📚Neuronal Dynamics 17.2 Hopfield Model](https://neuronaldynamics.epfl.ch/online/Ch17.S2.html)
+||[📚Neuronal Dynamics 19.2.1/2 Hebb's Rule & STDP](https://neuronaldynamics.epfl.ch/online/Ch19.S2.html)
+||[📜 Neuronal Dynamics 19.4 Reward-based learning](https://neuronaldynamics.epfl.ch/online/Ch19.S4.html)
+||[📚Dayan & Abbott 7.4: Network Stability & Associative Memory (pg. 260-265)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_07_Network_Models.pdf)
+||[📚Dayan & Abbott 8.3: Synaptic normalization (pg. 289-291)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_08_Plasticity_and_Learning.pdf)
 |||
 |► **Lab 6** | [Hopfield networks](Labs/lab6)|
 
