@@ -152,7 +152,7 @@ Legend for course readings
 |                 |      |
 | --------------- | ---- |
 |                 | Go to the [week 5 folder](Slides/week5/) for draft and annotated lecture slides.
-| **► Lecture 11**  | rate models of tuning
+| **► Lecture 9**  | rate models of tuning
 |                 | vision I: overview
 |                 | vision II: retina
 |                 | vision III: topographic maps
@@ -162,7 +162,7 @@ Legend for course readings
 ||[📚Dayan & Abbott 1.2-1.3: Firing Rates (pg. 8-24)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_01_Neural_Encoding_I.pdf)
 ||[📚Dayan & Abbott 2.3, 2.6: Early Visual System, Retinal/LGN Receptive Fields (pg. 51, 77)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
 |                 |      |
-| **► Lecture 12**  | vision IV: cortical hierarchy
+| **► Lecture 10**  | vision IV: cortical hierarchy
 |                 | vision V: sparse coding
 |                 | V1 laminar structure and the cortical microcircuit
 | *Reading*       |
@@ -181,7 +181,7 @@ Legend for course readings
 |                 |      |
 | --------------- | ---- |
 |                 | Go to the [week 6 folder](Slides/week6/) for draft and annotated lecture slides.
-| **► Lecture 9** | Hippocampus overview
+| **► Lecture 11** | Hippocampus overview
 |                 | Navigation
 |                 | Memory and the trisynaptic circuit
 | *Reading*       |
@@ -190,7 +190,7 @@ Legend for course readings
 ||[📚Neuronal Dynamics 17.1.2 Neuronal assemblies](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
 ||📜Neuronal Dynamics [17.1.3 Working memory](https://neuronaldynamics.epfl.ch/online/Ch17.S1.html)
 |                 |      |
-| **► Lecture 10**  | Pattern storage and retrieval in area Ca3
+| **► Lecture 12**  | Pattern storage and retrieval in area Ca3
 |                 | Hopfield networks
 |                 | Continuous Attractors
 | *Reading*       |
