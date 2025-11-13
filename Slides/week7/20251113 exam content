@@ -1,0 +1,171 @@
+
+gray matter
+white matter
+Parkinson's disease
+Basal Ganglia
+Substantia Nigra
+Broca's Area
+Wernicke's Area
+Tan
+Frontal lobe
+Fluent Aphasia
+Expressive Aphasia
+
+Nernst potential
+Ionic concentration gradient
+Membrane voltage
+diffusive/chemical/entropic vs. electrical force/work
+Na+/K+ ATPase
+leak channels
+resting potential
+reversal potential
+membrane resistance (units)
+membrane capacitance (units)
+membrane current (units)
+membrane time constant (units, typical range)
+inhibitory/excitatory post-synaptic potential
+membrane integration (role of R, C, τ)
+role of ionic charge, concentration differences in reversal potentials
+typical chloride reversal potential      50–65   mV
+typical potassium reversal potential    -100–-80 mV
+typical sodium reversal potential       -80–-60  mV
+typical resting potential               -75–-60  mV
+
+Action potential
+threshold
+positive feedback
+upswing, depolarisation
+repolarisation
+hyperpolarisation
+relative refractory period
+absolute refractory period
+which ions flow, in which directions, in each step
+
+Hodgkin Huxley (memorise mathematical model with physiological interpretations)
+voltage-gated ionic conductances
+voltage gates
+maximal conductances
+voltage-gated sodium m gate (role in spiking)
+voltage-gated sodium h gate (role in spiking)
+voltage-gated potassium n gate (role in spiking)
+voltage clamp
+patch clamp (cell attached)
+whole cell
+stable, scalar, linear, first-order ODEs
+steady state (t→∞) solutions
+time constants
+exponential solution ansatz
+Forward Euler integration
+Forward exponential Euler integration
+two compartment models
+axial conductance, currents
+there are some HH deep thought questions!
+
+LIF (memorise mathematical model with physiological interpretations)
+find its threshold
+adding a refractory period
+derive relationship between spiking frequency/period and applied current 
+A-level differential calculus, critical thought
+
+soma
+dendrite
+axon
+synapse
+axonal terminal / axonal boutaon / presynapse
+dendritic spine / postsynapse
+action potential propagation (no PDE math)
+steps in synaptic transmission
+calcium influx in presynapse
+readily releasable pool
+vesicle fusion
+neurotransmitter release and diffusion
+neurotransmitter binding
+ligand vs voltage-gated ion channels
+metabotropic vs ionotropic neurotransmitter receptors
+short-term depression/facilitation (memorise mathematical model with physiological interpretations)
+
+Dale's principle
+Modulators: Serotonin, histamine, dopamine, adrenaline/norepinephrine, (acetylcholine?)
+AMPA receptors ionotropic, glutamate, non-selective cation channel, reversal near 0 mV 
+NMDA receptors metabotropic, glutamate, Ca2+ channel, coincidence detector using Mg2+ block), reversal near 0 mV  <- Nitrous oxide, Dextrorphan, Ketamine
+GABA_A receptor is ionotropic chloride channel  (-60 to -80 mV)
+GABA_B receptor is metabotropic channel (usually activating a potassium current) (-80 to -100 mV) <- Benzodiazepines
+Muscarinic acetylcholine receptor (mAChR) metabotropic (various effects)
+Nicotinic  acetylcholine receptor (nAChR) non-selective cation channel, reversal near 0 mV <- Nicotine
+
+Hebbian learning
+Oja's rule
+Finding fixed points and checking stability in nonlinear ODEs in one variable
+LTP, LTD, STDP
+gradient descent parameter optimisation, loss function
+A-level differential calculus for converting loss functions to gradient descent rules
+
+hippocampus
+entorhinal cortex (EC)
+hippocampal formation
+areas DG, CA3, CA1
+granule cells
+sparse k-winner-take all pattern separation in DG (function?)
+auto-associative (attractor, Hopfield-like) recurrent network in CA3 (function?)
+CA1 memory readout, place cells
+EC input-output, grid cells
+Hopfield networks (memorise mathematical model with physiological interpretations)
+What is an attractor network?
+Hopfield energy function
+Calculating Hopfield weights
+Calculating Hopfield state evolution
+
+cerebellum
+granule cells
+Purkinje cells
+climbing fibre error
+binary perceptron McCulloch–Pitts (linear threshold) "neuron" (memorise mathematical model with physiological interpretations)
+mathematical definition: inputs, weights, Heaviside step threshold, outputs
+delta learning rule
+Evaluating a perceptron/McCulloch–Pitts unit's output for given input
+Updating a perceptron/McCulloch–Pitts unit's weights
+
+photoreceptors
+bipolar cells
+retinal ganglion cells
+center-surround tuning
+opponent channels
+Gabor function (Gaussian * sinusoid)
+simple cells (mostly V1 layer 4, some 6)
+complex cells (V1 layer 2/3 and higher)
+phase invariance
+tuning curve
+receptive field
+what pathway
+where pathway
+cortical hierarchy
+retinotopy
+Olhausen and Field's sparse overcomplete basis/dictionary model of simple cells
+Wilson-Cowan neural fields
+Rate coding (temporal and population senses)
+Phase coding (hippocampal theta phase precession
+Timing code (inter-aural time delays)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
