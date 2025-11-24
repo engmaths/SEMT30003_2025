@@ -220,7 +220,7 @@ Legend for course readings
 | **► Lecture 14**  | Extracellular recording
 |                 | Statistical analysis of spiking data
 | *Reading*       |
-||❗🧠Coursenotes: [spike-train statistics](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Coursenotes/08.1_spike_train_statistics)
+||❗🧠Coursenotes: [spike-train statistics](Reading/Coursenotes/08.1_spike_train_statistics.pdf)
 ||[📚Neuronal Dynamics 11.2 Encoding Models in Systems Neuroscience](https://neuronaldynamics.epfl.ch/online/Ch11.S2.html)
 ||[📚Dayan & Abbott 1.4: Spike-Train Statistics (pg. 24-34)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_01_Neural_Encoding_I.pdf)
 ||[📚Dayan & Abbott 2.2, 2.4: Estimating Firing Rates, Reverse-Correlation (pg. 45-51, 60-74)](https://github.com/engmaths/SEMT30003_2025/blob/main/Reading/Textbooks/Dayan%20and%20Abbott%20-%202001%20-%20Theoretical%20Neuroscience%20chapters/Dayan_and_Abbot_02_Neural_Encoding_II.pdf)
